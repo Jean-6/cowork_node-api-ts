@@ -6,7 +6,7 @@ enum RoomType{
 }
 
 export interface Room{
-
+    id :  string,
     type : RoomType,
     numberOfPlaces : number,
     seatingArrangement : string, // in U | theater | classroom | meeting

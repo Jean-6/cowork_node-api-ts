@@ -13,6 +13,7 @@ enum BookingMode{
 }
 
 export interface Booking {
+    id :  string,
     resourceType : string,
     mode : BookingMode,
     duration : number,
