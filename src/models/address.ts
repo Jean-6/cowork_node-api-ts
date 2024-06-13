@@ -5,5 +5,4 @@ export interface Address{
     state : string,
     postalCode : number,
     country : string,
-
 }
