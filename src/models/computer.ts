@@ -1,5 +1,7 @@
+import { Types } from 'mongoose';
+
 export interface Computer {
-    id :  string,
+    id :  Types.ObjectId,
     brand : string,
     model : string,
     numberOfCore : number,

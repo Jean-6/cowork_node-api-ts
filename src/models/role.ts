@@ -1,5 +1,7 @@
+import { Types } from 'mongoose';
+
 export interface Role{
-    id : string,
+    id : Types.ObjectId, 
     description : string,
 
 }

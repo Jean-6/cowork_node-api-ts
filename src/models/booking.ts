@@ -1,3 +1,4 @@
+import { Types } from 'mongoose';
 
 enum ConfirmationOption {
     MANUAL = 1,
@@ -13,7 +14,7 @@ enum BookingMode{
 }
 
 export interface Booking {
-    id :  string,
+    id :  Types.ObjectId,
     resourceType : string,
     mode : BookingMode,
     duration : number,

@@ -1,9 +1,16 @@
-import { Address } from "./address";
+
+import { Types } from 'mongoose';
 
 export interface Center {
-    id :  string,
+    id :  Types.ObjectId,
     name : string,
-    address : Address,
+    address : {
+        street : number,
+        city : string,
+        state : string,
+        postalCode : number,
+        country : string,
+    },
     phone : string,
 
 }
