@@ -1,13 +1,12 @@
-import { Types } from 'mongoose';
 
 export interface Printer {
-    id  : Types.ObjectId,
     type : string, // jet d'encre | thermique | laser | multifonction
     resolution: string,
-    printingSpeed : number,
+    printing_speed : number,
     capacity : number,
     connectivity: string,
-    paperFormat : string,
-    advancedFeatures: string,
+    paper_format : string,
+    advanced_features: string,
+    image : Image[]
 
 }

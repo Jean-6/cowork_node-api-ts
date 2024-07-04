@@ -8,7 +8,6 @@ enum Status {
 }
 
 export interface Order {
-    id: Types.ObjectId,
     user_id: Types.ObjectId,
     order_date : Date,
     total_amount : number,

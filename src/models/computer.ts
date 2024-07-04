@@ -1,14 +1,16 @@
 import { Types } from 'mongoose';
 
 export interface Computer {
-    id :  Types.ObjectId,
     brand : string,
     model : string,
-    numberOfCore : number,
-    frquency : number,
-    RAMCapacity : number,
-    storageCapacity : number,
-    operatingSystem : string,
-
+    number_of_Core : number,
+    frequency : number,
+    random_access_memory_capacity : number,
+    storage_capacity : number,
+    operating_system : string,
+    image : Image[]
 
 }
+
+
+

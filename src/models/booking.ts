@@ -1,4 +1,5 @@
 import mongoose, {Schema} from "mongoose";
+import mongooseService from "../service/mongooseService";
 
 enum ConfirmationOption {
     MANUAL = 1,
@@ -32,5 +33,5 @@ const BookingSchema = new Schema<Booking>({
 
 });
 
-const Booking =  mongoose.model<Booking>("Booking", BookingSchema);
+const Booking =  mongooseService.getMongoose().model<Booking>("Booking", BookingSchema);
 export default Booking;

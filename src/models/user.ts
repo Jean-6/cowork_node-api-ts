@@ -1,7 +1,7 @@
-import { Types } from 'mongoose';
+import mongoose, {Schema} from "mongoose";
+import mongooseService from "../service/mongooseService";
 
 export interface User {
-    id :  Types.ObjectId,
     username : string,
     email : string,
     phone : string,
@@ -9,3 +9,16 @@ export interface User {
     created_at : Date,
 
 }
+
+const UserSchema = new Schema<User>({
+
+    username : { type : String, required : true },
+    email : { type : String, required : true },
+    phone : { type : String, required : true },
+    password : { type : String, required : true },
+    created_at : { type : Date, required : false },
+});
+
+const User = mongooseService.getMongoose().model<User>("User",UserSchema);
+
+export default User;
