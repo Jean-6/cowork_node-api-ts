@@ -1,16 +1,10 @@
-import express, {json, Request, Response} from 'express';
-import user from './routes/user';
-
-import swaggerUi from "swagger-ui-express";
-import * as swaggerDocument from "./swagger.json";
+import express from 'express';
 import bodyParser from "body-parser";
-
-
 
 //Express App
 const app = express();
 
-app.use(express.json);
+/*app.use(express.json);
 
 app.use((re,res,next) => {
     res.setHeader('Access-Control-Allow-Origin','*'); // To access to API from anywhere origin
@@ -19,21 +13,15 @@ app.use((re,res,next) => {
     next();
 });
 app.use(bodyParser.json())
-
+*/
 // API
-app.use ('/api/user', (req, res) => {
-
-    res.send({message: 'create user controller'});
-
+app.get ('/', (req, res) => {
+    res.send('create user controller');
 });
 
-// Documentation
-//app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument));
-
 // Express configuration
-
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello from Server : TypeScript + Node.js + Express !');
+app.use((req,res) => {
+    console.log('Hello from Server : TypeScript + Node.js + Express !');
 });
 
 const port = process.env.PORT || 3000; // Port Number
