@@ -3,7 +3,7 @@ import express  from 'express';
 import mongooseService from "./service/mongooseService";
 
 // Create Express server
-const app = express();
+//const app = express();
 
 
 class App {
